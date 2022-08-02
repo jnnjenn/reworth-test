@@ -1,0 +1,37 @@
+.container--searcher {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 20px;
+}
+
+.button {
+	background-color: #FFFFFF;
+	border: 1px solid #717171;
+	padding: 5px 15px;
+	font-family: 'Poppins';
+	color: #737779;
+	font-size: 14px;
+}
+
+.button:hover{
+	background: #ced9ff;
+	color: #2E58FF;
+}
+
+.button-left {
+	border-top-left-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+}
+
+.button-right {
+	border-top-right-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-left: none;
+	background: #ced9ff;
+	color: #2E58FF;
+}
+
+.button-middle {
+	border-left: none;
+}

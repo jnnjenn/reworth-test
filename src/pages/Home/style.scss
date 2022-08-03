@@ -24,7 +24,6 @@ body{
 }
 
 .container--cards {
-	border: 1px solid;
 	margin-bottom: 0px;
   padding: 3rem 4rem;
 
@@ -43,11 +42,11 @@ body{
 		grid-row-gap: 20px;
 		grid-column-gap: 20px;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+		align-items: baseline;
 	}
 
 	> .container--allcards >.container--card{
 		width: 100%;
-		min-height: 300px;
 		border: 1px solid blue;
 	}
 }

@@ -1,35 +1,36 @@
-# Getting Started with Create React App
+# Reworth Front Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Prueba a realizar:*
+*Parte 1:*
+● Se espera que consuma nuestra API que contiene el directorio de ofertas con
+el siguiente stack tecnológico: React, Next, TS, Axios , Base Web
+● Directorio de Ofertas: https://api.reworth.app/dev/directory
+● API Docs del directorio: https://docs.reworth.app/#operation/rewardsDirectory
+● El resultado esperado es el de la imagen siguiente, sin embargo puede proponer
+cualquier solución que desee acorde a su experiencia, ejemplo modelo de Airbnb:
+
+*Parte 2:*
+● Consuma nuestro componente de React y úselo para exponer el directorio de
+ofertas, se espera el mismo resultado que en la imagen anterior o siéntase en
+libertad de plantear la solución que desee. Que en resumen es mostrar las
+ofertas acorde a su mejor decisión
+● Componente:
+https://www.npmjs.com/package/@reworthrewards/reworth-directory
+● API Docs:
+https://developers.directory.reworth.co
 
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm uninstall node-sass`
+### `npm i node-sass`
+### `npm rebuild node-sass`
+
+... then...
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 

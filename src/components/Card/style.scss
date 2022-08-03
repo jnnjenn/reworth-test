@@ -1,0 +1,361 @@
+@import "../../../public/variables";
+
+.container--card{
+	box-shadow: 2px 3px 4px #2e58ff4d;
+	background-image: linear-gradient(288deg, #FFFFFF 0%, #E8ECFB 100%);
+	border-radius: $chakra-radii-lg;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: auto;
+}
+
+.directory-image {
+  width: 100%;
+}
+
+.container--card__image {
+	width: 100%;
+	height: auto;
+	border-top-left-radius: $chakra-radii-lg;
+	border-top-right-radius: $chakra-radii-lg;
+	padding: 1rem 0;
+	position: relative;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position-x: center;
+  background-position-y: top;
+	display: flex;
+  justify-content: space-between;
+}
+.container--card__image::before {
+    content: "";
+    background-image: linear-gradient(90deg, #2E58FF 0%, #2E58FF 24%, #2E58FF 60%, #2E58FF 83%, #2E58FF 100%);
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    border-top-left-radius: $chakra-radii-lg;
+    border-top-right-radius: $chakra-radii-lg;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+}
+
+.card--logo{
+	border-radius: $chakra-radii-full;
+	border-width: 4px;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: $chakra-fontWeights-medium;
+	position: relative;
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	background: $chakra-colors-white;
+	color: $chakra-colors-gray-800;
+	border-style: solid;
+	border-color: #2E58FF;
+	vertical-align: top;
+	width: $chakra-sizes-24;
+	height: $chakra-sizes-24;
+	font-size: calc(6rem / 2.5);
+	box-shadow: $chakra-shadows-xl;
+	font-family: $chakra-font-general;
+	margin-left: 20px;
+}
+
+.directory-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: $chakra-radii-full;
+}
+
+.card__image__cashback{
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: flex-end;
+	-webkit-box-align: flex-end;
+	-ms-flex-align: flex-end;
+	align-items: flex-end;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	z-index: 0;
+	margin-right: 20px;
+	> span{
+		display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-padding-start: $chakra-space-1;
+    padding-inline-start: $chakra-space-1;
+    -webkit-padding-end: $chakra-space-1;
+    padding-inline-end: $chakra-space-1;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    border-radius: 6px;
+    font-weight: 500;
+    background: #2E58FF;
+    color: $chakra-colors-white;
+    padding: 0rem 0.4rem;
+    font-family: $chakra-font-general;
+	}
+}
+
+.container--card__content{
+	width: 100%;
+	height: auto;
+	padding: 1rem;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container--card__title {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr);
+    width: 100%;
+}
+
+.title--left {
+    grid-column: span 8/span 8;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+		> h3 {
+			font-family: Poppins;
+			font-weight: 500;
+			font-size: $chakra-fontSizes-lg;
+			line-height: 1.33;
+			color: $chakra-colors-brand-secondaryDark;
+			margin: 0px;
+			justify-content: flex-start;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+	}
+}
+
+.title--right {
+	grid-column: span 4/span 4;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: right;
+
+	> .txt-money {
+    margin: 0;
+		font-family: $chakra-font-general;
+    font-weight: 500;
+    font-size: $chakra-fontSizes-sm;
+    line-height: 1.33;
+    margin: 0px;
+    padding-right: 3px;
+    color: $chakra-colors-brand-secondaryDark;
+	}
+
+	> .txt-rating {
+		margin: 0;
+		font-family: Poppins;
+    font-weight: 500;
+    font-size: $chakra-fontSizes-sm;
+    line-height: 1.33;
+    margin: 0px;
+    padding-left: 5px;
+    color: $chakra-colors-brand-secondaryDark;
+	}
+}
+
+.container--category {
+	width: 100%;
+	padding-top: 0.5rem;
+
+	> .category--name {
+		font-family: Poppins;
+		font-weight: 500;
+		font-size: $chakra-fontSizes-sm;
+		line-height: 1.33;
+		color: #2E58FF;
+		line-height: 1.2;
+		margin: 0;
+	}
+}
+
+.container--reward {
+	display: grid;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #00000061;
+	> .reward--name {
+		font-family: $chakra-font-general;
+		font-weight: 500;
+		font-size: $chakra-fontSizes-sm;
+		line-height: 1.2;
+		color: $chakra-colors-brand-secondaryDark;
+		margin: 0px;
+	}
+
+}
+
+.container--location {
+	display: grid;
+	grid-template-columns: repeat(12, 2fr);
+	width: 100%;
+	padding-top: 0.8rem;
+}
+
+.location-right {
+	grid-column: span 6/span 6;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.ulr-location {
+	transition-property: $chakra-transition-property-common;
+	transition-duration: $chakra-transition-duration-fast;
+	transition-timing-function: $chakra-transition-easing-ease-out;
+	cursor: pointer;
+	-webkit-text-decoration: none;
+	text-decoration: none;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	color: inherit;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	font-family: Poppins;
+	font-weight: 500;
+	font-size: $chakra-fontSizes-sm;
+	line-height: 1.33;
+	color: #2E58FF;
+	cursor: pointer;
+	-webkit-text-decoration: underline;
+	text-decoration: underline;
+	margin: 0px;
+	margin-top: 0.2rem;
+}
+
+.location-left {
+	grid-column: span 6/span 6;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+button.conoce-mas {
+	background: none;
+	border: none;
+	font-family: $chakra-font-general;
+	font-weight: 500;
+	font-size: $chakra-fontSizes-sm;
+	line-height: 1.33;
+	margin: 0px;
+	padding-left: 0.3rem;
+	color: #2E58FF;
+	cursor: pointer;
+	-webkit-text-decoration: underline;
+	text-decoration: underline;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}

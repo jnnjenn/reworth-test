@@ -21,3 +21,11 @@ In the project directory, you can run:
 ... then...
 
 ### `npm start`
+
+
+## Routes
+
+Se puede acceder a dos rutas:
+
+- / Home que es donde cree mi desarrollo 
+- /directory es donde esta importado el componente de Reworth 

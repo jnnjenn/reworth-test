@@ -25,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.2.1",
+    "@types/react-bootstrap": "^0.32.30",
     "react-router-dom": "6.0.2"
   },
   "scripts": {

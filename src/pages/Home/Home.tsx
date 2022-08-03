@@ -10,8 +10,6 @@ import './style.scss';
 // * Store
 import DirectoryStore from '../../stores/directoryStore';
 import { Card } from '../../components/Card/Card';
-import { toJS } from 'mobx';
-import { DirectoryComponent } from '../../components/Directory/Directory';
 
 export default observer(() => {
 	const [loading, setLoading] = useState(false);

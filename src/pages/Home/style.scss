@@ -50,3 +50,41 @@ body{
 		border: 1px solid blue;
 	}
 }
+
+@media screen and (max-width: 80em){
+	.container--allcards  {
+		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	}
+}
+@media screen and (max-width: 62em){
+	.container--allcards  {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+@media screen and (max-width: 48em){
+	.container--home{
+		padding: 0 3rem !important;
+	}
+	.container--cards{
+		margin-bottom: 15px !important;
+    padding: 3rem 0rem !important;
+		> h2{
+			font-size: $chakra-fontSizes-lg;
+		}
+	}
+	.container--allcards  {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+@media screen and (max-width: 34em){
+	.container--home{
+		padding: 0 2rem !important;
+	}
+	.container--cards{
+		margin-bottom: 15px !important;
+    padding: 2rem 0rem !important;
+	}
+	.container--allcards  {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+	}
+}

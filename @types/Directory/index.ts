@@ -27,7 +27,7 @@ export type TDirectory = {
 	dv_category: string,
 	raw_category: string,
 	dv_address: string,
-	dv_latlng: [ number, number ],
+	dv_latlng: [],
 	price_level: number,
 	rating: number,
 	popularity: number

@@ -1,5 +1,6 @@
 import to from 'await-to-js';
-import { observable, action } from 'mobx';
+import { observable, action, toJS } from 'mobx';
+import { TDirectory } from '../../../@types/Directory';
 
 // * Types
 import { TDirectoriesData } from '../../../@types/stores/directoryStore';
@@ -41,6 +42,25 @@ class DirectoryStore {
 		this.directoriesData.hasPrevPage = responseData.hasPrevPage;
 		this.directoriesData.hasNextPage = responseData.hasNextPage;
 		this.directoriesData.data = responseData.data;
+  };
+
+	@action orderByRating = async () => {
+		const newOrder = this.directoriesData.data.sort((a, b) => (a.rating < b.rating) ? 1 : -1);
+		this.setOrder(newOrder);
+  };
+
+	@action orderByCashback = async () => {
+		const newOrder = this.directoriesData.data.sort((a, b) => (a.cashback_decimal < b.cashback_decimal) ? 1 : -1);
+		this.setOrder(newOrder);
+  };
+
+	@action orderByNewest = async () => {
+		const newOrder = this.directoriesData.data.sort((a, b) => (a.created > b.created) ? 1 : -1);
+		this.setOrder(newOrder);
+  };
+
+	@action setOrder = async (newOrder: TDirectory[]) => {
+		this.directoriesData.data = newOrder;
   };
 
 }

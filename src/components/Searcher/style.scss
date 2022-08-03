@@ -92,3 +92,9 @@
 .button-middle {
 	border-left: none;
 }
+
+@media screen and (max-width: 34em){
+	.button-text {
+		display: none;
+	}
+}

@@ -1,17 +1,26 @@
-import React from 'react';
 import { TDirectory } from '../../../@types/Directory';
 
 // *Styles
 import './style.scss';
 
-export const Card = (directory : TDirectory ) => {
+// *Enum
+import { categoryBackground } from '../../stores/utils/enums/categories';
+import { useEffect, useState } from 'react';
 
-  console.log('Card.tsx - 9  >>>>>>>>> directory: ', directory);
+export const Card = (directory : TDirectory ) => {
+  const [imgCategory, setImgCategory] = useState('');
+
+  useEffect(() => {
+    const imageCat = categoryBackground.filter((img)=> img.category === directory.raw_category );
+    setImgCategory(imageCat[0].url);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <section className='container--card'>
       <div className='container--card__image' >
-        <img src={directory.media} alt={directory.dv_name} className='directory-image' />
+        <img src={imgCategory} alt={directory.dv_name} className='directory-image' />
+        {/* <img src={directory.media} alt={directory.dv_name} className='directory-image' /> */}
         <div className='card__image__cashback'>{directory.dv_cashback}
         </div>
       </div>

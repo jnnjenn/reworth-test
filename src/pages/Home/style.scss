@@ -1,37 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import "../../../public/variables";
 
 body{
-	background-color: rgb(250, 248, 255);
+	font-family: $chakra-fonts-body;
+	color: $chakra-colors-gray-800;
+	background: $chakra-colors-brand-bg;
+	transition-property: background-color;
+	transition-duration: $chakra-transition-duration-normal;
+	line-height: $chakra-lineHeights-base;
+	margin: 0;
 }
 
 .container--home{
-	padding: 2rem;
-	margin: auto;
-	border: 1px solid;
-	width: 80%;
-	min-height: 500px;
+	padding: 3rem 4rem;
 	> h1{
-		color: rgb(46, 88, 255);
-    font-family: 'Poppins';
-		font-weight: bold;
+		line-height: 1.2;
+		font-family: $chakra-font-general-bold;
+    font-weight: 700;
+    font-size: $chakra-fontSizes-5xl;
+    line-height: 1.33;
+    color: #2E58FF;
+		margin: 0px;
 	}
 }
 
 .container--cards {
+	border: 1px solid;
+	margin-bottom: 0px;
+  padding: 3rem 4rem;
+
 	> h2 {
-    color: #24377c;
-    font-family: 'Poppins';
+    font-family: $chakra-font-general;
     font-weight: bold;
-    font-size: 20px;
+		font-size: $chakra-fontSizes-3xl;
+    color: $chakra-colors-brand-secondaryDark;
+		margin: 0px;
 	}
-	> .parent {
+	> .container--allcards {
+		width: 100%;
+    padding-top: 1rem;
+		height: auto;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 300px);
-		gap: 20px;
+		grid-row-gap: 20px;
+		grid-column-gap: 20px;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
-	> .parent >.container--card{
+	> .container--allcards >.container--card{
 		width: 100%;
 		min-height: 300px;
 		border: 1px solid blue;

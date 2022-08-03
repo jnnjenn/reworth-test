@@ -37,7 +37,7 @@ export default observer(() => {
 				<Searcher></Searcher>
 				<div className='container--cards'>
 					<h2>Recompensas pensadas en ti</h2>
-					<div className="parent">
+					<div className="container--allcards">
 						{ directoriesData.data.length ? renderDirectories() : null }
 					</div>
 				</div>				

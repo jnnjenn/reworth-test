@@ -1,4 +1,26 @@
-@import url(../style-global.scss);
+@import "../../../public/variables";
+
+.container--card{
+	box-shadow: 2px 3px 4px #2e58ff4d;
+	background-image: linear-gradient(288deg, #FFFFFF 0%, #E8ECFB 100%);
+	border-radius: $chakra-radii-lg;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: auto;
+}
 
 .directory-image {
   width: 100%;

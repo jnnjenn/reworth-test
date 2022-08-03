@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Reworth = require('@reworthrewards/reworth-directory');  
 const { ReworthDirectory } = Reworth;
 

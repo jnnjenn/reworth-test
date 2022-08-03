@@ -1,23 +1,53 @@
+@import "../../../public/variables";
+
 .container--searcher {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding: 20px;
+	padding-top: $chakra-space-12;
+	padding-bottom: $chakra-space-6;
 }
 
 .button {
+	font-family: $chakra-fonts-body;
+  font-size: $chakra-fontSizes-md;
+	font-weight: 500;
+	color: $chakra-colors-brand-tabText;
 	background-color: #FFFFFF;
-	border: 1px solid #717171;
-	padding: 5px 15px;
-	font-family: 'Poppins';
-	color: #737779;
-	font-size: 14px;
+	width: auto;
+	box-shadow: $chakra-shadows-xl;
+	background: $chakra-colors-white;
+	border: 1px solid #00000061;
+	padding: 0.50rem 1rem;
+	cursor: pointer;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	> svg {
+    padding-right: 8px;
+	}
 }
 
 .button:hover{
 	background: #ced9ff;
 	color: #2E58FF;
+	> svg {
+    color: #2E58FF;
+	}
 }
+
 
 .button-left {
 	border-top-left-radius: 5px 5px;
@@ -25,11 +55,38 @@
 }
 
 .button-right {
-	border-top-right-radius: 5px 5px;
-	border-bottom-right-radius: 5px 5px;
+	box-shadow: $chakra-shadows-xl;
+	background: #2E58FF4D;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border: 1px solid #2E58FF4D;
+	border-right-width: 1px;
+	cursor: pointer;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
 	border-left: none;
-	background: #ced9ff;
-	color: #2E58FF;
+	color: rgb(46, 88, 255);
+	padding-left: 0.5rem;
+	padding-right: 0rem;
+}
+
+.button-right:hover{
+	background: #81A0FF;
 }
 
 .button-middle {

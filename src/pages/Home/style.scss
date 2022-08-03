@@ -27,13 +27,13 @@ body{
 	> .parent {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 150px);
+		grid-template-rows: repeat(2, 300px);
 		gap: 20px;
 	}
 
-	> .parent >.child{
+	> .parent >.container--card{
 		width: 100%;
-		min-height: 150px;
+		min-height: 300px;
 		border: 1px solid blue;
 	}
 }

@@ -2,7 +2,7 @@ import { TDirectory } from '../../Directory';
 
 export type TDirectoriesData = {
   success?: boolean,
-  data?: TDirectory[];
+  data: TDirectory[];
   totalCount?: number;
   pages?: number;
   page?: number;

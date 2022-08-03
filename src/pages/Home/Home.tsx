@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 // * Componenets
 import { Searcher } from '../../components/Searcher/Searcher';
@@ -9,51 +9,40 @@ import './style.scss';
 
 // * Store
 import DirectoryStore from '../../stores/directoryStore';
+import { Card } from '../../components/Card/Card';
+import { toJS } from 'mobx';
+import { DirectoryComponent } from '../../components/Directory/Directory';
 
 export default observer(() => {
 	const [loading, setLoading] = useState(false);
-	const { directoriesData, getDirectoriesPageData } = DirectoryStore;
-	
-
-	const getDirectories = async () => {
-    await getDirectories();
-  };
+	const { directoriesData, getDirectoriesData } = DirectoryStore;
 
 	useEffect(() => {
     setLoading(true);
-    getDirectoriesPageData().then((response) => {
-      setLoading(false);
-    });
-  }, []);
+    getDirectoriesData();
+    setLoading(false);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	useEffect(() => {
-		console.log('Home.tsx - 16  >>>>>>>>> directoriesData: ', directoriesData);
-		console.log('\nHome.tsx - 31 directoriesData >>> \n', directoriesData.data);
+	const renderDirectories = useCallback((): JSX.Element[] => {
+    const directoriesList = directoriesData.data.map((directory, indexDirectory) => {
+			return <Card key={indexDirectory} {...directory} />
+		});
+		return directoriesList;
   }, [directoriesData]);
-	
-
 
 	return (
-		<div className='container--home'>
-			<h1>Recompensas</h1>
-			<Searcher></Searcher>
-			<div className='container--cards'>
-				<h2>Recompensas pensadas en ti</h2>
-
-				<div className="parent">
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-					<div className="child">Child</div>
-				</div>
-
-			</div>
-			
-		</div>
+		(!loading ? 
+			<div className='container--home'>
+				<h1>Recompensas</h1>
+				<Searcher></Searcher>
+				<div className='container--cards'>
+					<h2>Recompensas pensadas en ti</h2>
+					<div className="parent">
+						{ directoriesData.data.length ? renderDirectories() : null }
+					</div>
+				</div>				
+			</div> 
+			: null)
 	);
 
 });

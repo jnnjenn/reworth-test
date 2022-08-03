@@ -5,19 +5,9 @@ import { FaStar, FaDollarSign, FaRegClock, FaSlidersH } from 'react-icons/fa';
 import './style.scss';
 
 export const Searcher = () => {
-
-	const btnFilterBetterRating = () => {
-		console.log('Searcher.tsx - 10  >>>>>>>>> ');
-	}
-
-	const btnFilterMostCashback = () => {
-		console.log('Searcher.tsx - 14  >>>>>>>>> ');
-	}
-
-	const btnFilterRecent = () => {
-		console.log('Searcher.tsx - 18  >>>>>>>>> ');
-	}
-
+	const btnFilterBetterRating = () => { }
+	const btnFilterMostCashback = () => { }
+	const btnFilterRecent = () => { }
   return (
     <section className='container--searcher'>
       <button className='button button-left' onClick={btnFilterBetterRating} ><FaStar /> Mejor Rating</button>
